@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="http://dave-reed.com/csc121/random.js"></script>
+        <script>
+            function Respond(){
+                document.getElementById('response').innerHTML=
+                    RandomOneOf(['YES!','NO!','MAYBE!','IT IS LIKELY!','IT IS UNLIKELY!', 'YOU CAN BET!','DO NOT COUNT ON IT!','THAT IS A UNIVERSAL SECRET.']);
+            };
+        </script>
+    </head>
+    <body style="text-align: center">
+        <h1>The Oracle of the Internet</h1>
+        <P>Enter your question below, Only Yes or No sort answers are provided</P>
+        <input id="question">
+        <br>
+        <p>then shake the ball for your answer!</p>
+        <image ondrag="
+            if(document.getElementById('question').value!==''){Respond();};" src="https://cdn11.bigcommerce.com/s-eywgh/images/stencil/500x659/products/132/798/Blue_Ball__32218.1528831851.jpg?c=2">
+        </image>
+        <hr>
+        <p>The Oracle Says...</p>
+        <h2 id="response"></h2>
+    </body>
+</html>

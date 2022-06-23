@@ -1,0 +1,97 @@
+<html>
+    <!-- Words, It's not a MadLibs! -->
+    <!-- Kendrick Smith -->
+    <!-- V 0.1 28 Sept. 2019 -->
+
+<head>
+    <title>Words</title>
+    <script>
+        function WriteStory (){
+             n= Math.floor(Math.random() * 3) + 1 ;
+             document.getElementById('title').innerHTML = 'Story ' + n;
+
+             name = document.getElementById('Name').value;
+             adj = document.getElementById('Adjective').value;
+             adj2 = document.getElementById('Adjective2').value;
+             adj3 = document.getElementById('Adjective3').value;
+             noun = document.getElementById('Noun').value;
+             noun2 = document.getElementById('Noun2').value;
+             noun3 = document.getElementById('Noun3').value;
+             animal = document.getElementById('Animal').value;
+             year = document.getElementById('Year').value;
+             number = document.getElementById('Number').value;
+             action = document.getElementById('Action').value;
+             color = document.getElementById('Color').value;
+             superlative = document.getElementById('Superlative').value;
+             bodypart = document.getElementById('Bodypart').value;
+             bodypart2 = document.getElementById('Bodypart2').value;
+             time = document.getElementById('TimeOfDay').value;
+
+             if(n==1){
+                document.getElementById('story').innerHTML = 
+                    'A young elf by the name of '+name+', in order to celebrate the coming of adulthood, just '+number+' years old, '+action+'s alone on the banks of the '+noun+' River. The '+noun+' gave life to the forest and all the '+animal+'s that called it home.';
+             }
+             else if(n==2){
+                document.getElementById('story').innerHTML = 
+                    'The '+color+' Dragon is the '+superlative+' Dragon of all. It has '+adj+' '+bodypart+'s, and a '+bodypart2+' shaped like a '+noun+'. It loves to eat '+color+' '+animal+'s, although it will feast on nearly anything. It is '+adj2+' and '+adj3+'. You must be careful around it, or you may end up as it`s meal!';
+             }
+             else if(n==3){
+                document.getElementById('story').innerHTML = 
+                    'Once upon a '+time+' dreary, while I '+action+', '+adj+' and '+adj2+', Over many a quaint and curious volume of forgotten lore. While I '+action+', nearly napping, suddenly there came a  '+noun3+', As of some one gently rapping, rapping at my '+noun+'. Tis some '+noun2+', I muttered, tapping at my '+noun+', Only this and nothing more.';
+             }
+             else if(n==4){
+                document.getElementById('story').innerHTML = 
+                    '';
+             }
+             else if(n==5){
+                document.getElementById('story').innerHTML = 
+                    '';
+             }
+             else if(n==6){
+                document.getElementById('story').innerHTML = 
+                    '';
+             }
+             else if(n==7){
+                document.getElementById('story').innerHTML = 
+                    '';
+             }
+             else if(n==8){
+                document.getElementById('story').innerHTML = 
+                    '';
+             }
+             else if(n==9){
+                document.getElementById('story').innerHTML = 
+                    '';
+             };
+        };
+    </script>
+</head>
+<body style="text-align: center">
+    <h1 id="title">Write a Story!</h1>
+    <p id="story">Type in all the boxes and press the button!
+             <br> Not every box will be used by every story.</p>
+    <hr>
+    <div>
+        <input id="Name" value="Name">
+        <input id="Adjective" value="Adjective">
+        <input id="Adjective2" value="Adjective 2">
+        <input id="Adjective3" value="Adjective 3">
+        <br>
+        <input id="Noun" value="Noun">
+        <input id="Noun2" value="Noun 2">
+        <input id="Noun3" value="Noun 3">
+        <input id="Animal" value="Animal">
+        <br>
+        <input id="Year" value="Year">
+        <input id="Number" value="Number">
+        <input id="Action" value="Action">
+        <input id="Color" value="Color">
+        <br>
+        <input id="Superlative" value="Superlative">
+        <input id="Bodypart" value="Bodypart">
+        <input id="Bodypart2" value="Bodypart 2">
+        <input id="TimeOfDay" value="Time of Day">
+        <button onclick="WriteStory();">Play!</button>
+    </div>
+</body>
+</html>

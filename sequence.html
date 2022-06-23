@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        <title></title>
+        <script src="http://dave-reed.com/csc121/random.js"></script>
+        <script>
+            function MakeSequence(){
+                possibleChars=document.getElementById('char').value;
+                sequence= RandomOneOf(possibleChars)+
+                            RandomOneOf(possibleChars)+
+                            RandomOneOf(possibleChars);
+                document.getElementById('seq').innerHTML=
+                    document.getElementById('seq').innerHTML+" "+sequence;
+            };
+            function IncrementNum(){
+                num=parseInt(document.getElementById('num').innerHTML);
+                document.getElementById('num').innerHTML= num+1;
+            };
+        </script>
+    </head>
+    <body style="text-align: center">
+        <h4>Characters to choose from:</h4>
+        <input id="char" value="possible characters">
+        <p>*note: spaces and special characters are all included</p>
+        <Button onclick="
+                         times=document.getElementById('times').value;
+                         for(i=0;i<times;i++){
+                         MakeSequence(); IncrementNum();
+                         };
+                         ">Click for Sequence</Button>
+        <p>number of sequences to generate:</p><input id="times" value="1">
+        <hr>
+        <div>
+            <p id="seq"></p>
+        </div>
+        <p>Number of sequences generated: <span id="num">0</span></p>
+    </body>
+</html>
